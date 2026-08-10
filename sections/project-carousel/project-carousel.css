@@ -1,0 +1,184 @@
+.project-card {
+  position: relative;
+  min-height: 560px;
+  border: 6px solid var(--orange);
+  background: rgba(255, 254, 248, 0.66);
+  padding: 30px 24px 28px;
+}
+
+.arrow {
+  position: absolute;
+  top: 182px;
+  width: 0;
+  height: 0;
+  padding: 0;
+  border-right: 0;
+  border-left: 0;
+  border-radius: 0;
+  background: transparent;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.arrow:hover,
+.arrow:focus-visible {
+  outline: none;
+  transform: scale(1.08);
+}
+
+.arrow::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 28px solid transparent;
+  border-bottom: 28px solid transparent;
+}
+
+.arrow.left {
+  left: 8px;
+}
+
+.arrow.right {
+  right: 8px;
+}
+
+.arrow.left::before {
+  border-right: 48px solid #f00000;
+}
+
+.arrow.right::before {
+  border-left: 48px solid #f00000;
+}
+
+.counter {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  color: var(--blue);
+  font-size: 19px;
+  font-weight: var(--font-medium);
+}
+
+.photo {
+  width: min(365px, 78%);
+  min-height: 330px;
+  margin: 4px auto 8px;
+  display: grid;
+  place-items: center;
+  border-radius: 38px;
+  background: #86aff2;
+  text-align: center;
+  font-size: clamp(52px, 6vw, 78px);
+  font-weight: var(--font-heavy);
+  line-height: 1.65;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  min-height: 330px;
+  object-fit: cover;
+  display: none;
+}
+
+.photo.has-image {
+  display: block;
+  background: #fff;
+}
+
+.photo.has-image img {
+  display: block;
+}
+
+.photo.has-image span {
+  display: none;
+}
+
+.photo a {
+  display: inline-block;
+  color: #000;
+  font-size: 30px;
+  line-height: 1;
+  font-weight: var(--font-heavy);
+  text-decoration: underline;
+}
+
+.team-name {
+  margin: 0;
+  color: var(--blue);
+  text-align: center;
+  font-size: clamp(48px, 6vw, 72px);
+  line-height: 0.95;
+  font-weight: var(--font-heavy);
+  cursor: pointer;
+}
+
+.summary {
+  margin: 8px 0 0;
+  text-align: center;
+  font-size: clamp(26px, 3.4vw, 38px);
+  font-weight: var(--font-book);
+  line-height: 1.08;
+}
+
+
+@media (max-width: 1000px) {
+  .project-card {
+    min-height: 470px;
+  }
+}
+
+@media (max-width: 640px) {
+  .project-card {
+    min-height: 0;
+    padding: 22px 16px 20px;
+    border-width: 4px;
+  }
+
+  .photo {
+    width: min(280px, 82%);
+    min-height: 230px;
+    border-radius: 24px;
+    font-size: 44px;
+  }
+
+  .photo img {
+    min-height: 230px;
+  }
+
+  .arrow {
+    top: 132px;
+  }
+
+  .arrow.left {
+    left: 6px;
+  }
+
+  .arrow.right {
+    right: 6px;
+  }
+
+  .arrow::before {
+    border-top-width: 20px;
+    border-bottom-width: 20px;
+  }
+
+  .arrow.left::before {
+    border-right-width: 34px;
+  }
+
+  .arrow.right::before {
+    border-left-width: 34px;
+  }
+
+  .team-name {
+    font-size: 42px;
+  }
+
+  .summary {
+    font-size: 23px;
+  }
+}

@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Patch Demo Day</title>
+
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="sections/header/header.css" />
+    <link rel="stylesheet" href="sections/project-carousel/project-carousel.css" />
+    <link rel="stylesheet" href="sections/exhibition-map/exhibition-map.css" />
+    <link rel="stylesheet" href="sections/mobile-showcase/mobile-showcase.css" />
+    <link rel="stylesheet" href="sections/popup/popup.css" />
+    <link rel="stylesheet" href="sections/duck-hunt/duck-hunt.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="top">
+        <div class="brand" aria-label="Patch">
+          <img class="wordmark" src="assets/patch-wordmark.png" alt="Patch" />
+        </div>
+        <p class="day">Demo Day</p>
+      </header>
+
+      <section class="layout">
+        <section aria-labelledby="projectsTitle">
+          <h1 id="projectsTitle">2026 Projects:</h1>
+          <article class="project-card" aria-label="Selected project card">
+            <span class="counter" id="projectCounter">1 / 16</span>
+            <button class="arrow left" type="button" id="prevProject" aria-label="Previous project"></button>
+            <button class="arrow right" type="button" id="nextProject" aria-label="Next project"></button>
+            <div class="photo" id="featuredPhoto">
+              <img id="featuredImage" alt="" />
+              <span>team<br />photo<br /><a href="#map">see info</a></span>
+            </div>
+            <h2 class="team-name" id="featuredTitle">Team Name</h2>
+            <p class="summary" id="featuredSummary">6 words about project</p>
+          </article>
+        </section>
+
+        <section class="map-wrap" id="map" aria-labelledby="mapHeading">
+          <h2 class="map-title" id="mapHeading">Exhibition Map:</h2>
+          <svg class="map" viewBox="80 0 790 760" role="img" aria-labelledby="mapTitle mapDesc">
+            <title id="mapTitle">Patch Demo Day project map</title>
+            <desc id="mapDesc">Clickable coloured blocks for project and stand areas.</desc>
+
+            <g class="zone programme-group-zone" tabindex="0" role="button" aria-label="Young Builder Week" data-id="ybw" data-category="programmes">
+              <rect class="shape programme-group-shape" x="90" y="0" width="385" height="142" fill="var(--blue-soft)"></rect>
+              <text class="label-md" x="283" y="54">Young Builder Week</text>
+              <text class="label-sm" x="283" y="101">Tap for builders</text>
+            </g>
+
+            <g class="zone programme-group-zone" tabindex="0" role="button" aria-label="Patch Grants" data-id="grants" data-category="programmes">
+              <rect class="shape programme-group-shape" x="475" y="0" width="385" height="142" fill="var(--blue-soft)"></rect>
+              <text class="label-md" x="668" y="54">Patch Grants</text>
+              <text class="label-sm" x="668" y="101">Tap for grantees</text>
+            </g>
+
+            <line class="programme-divider" x1="475" y1="8" x2="475" y2="134"></line>
+
+            <g aria-label="Patch Programmes section label">
+              <rect x="90" y="142" width="770" height="56" fill="var(--blue)"></rect>
+              <text class="white label-md" x="475" y="172">Patch Programmes</text>
+            </g>
+
+            <g class="zone" tabindex="0" role="button" aria-label="Demos Anon" data-id="demos" data-category="communities">
+              <rect class="shape" x="90" y="198" width="258" height="548" fill="var(--community)"></rect>
+              <text class="label-lg" x="219" y="284">Demos</text>
+              <text class="label-lg" x="219" y="348">Anon</text>
+            </g>
+
+            <g class="zone" tabindex="0" role="button" aria-label="Fitzwilliam Circles" data-id="circles" data-category="communities">
+              <rect class="shape" x="90" y="470" width="258" height="276" fill="var(--community)"></rect>
+              <text class="label-md" x="219" y="552">Fitzwilliam</text>
+              <text class="label-md" x="219" y="617">Circles</text>
+            </g>
+
+            <g aria-label="Communities section label">
+              <rect x="348" y="198" width="62" height="548" fill="var(--community-rail)"></rect>
+              <text class="white label-md vertical" x="379" y="470">Communities</text>
+            </g>
+
+            <g aria-label="Hardware section label">
+              <rect x="540" y="198" width="58" height="404" fill="var(--hardware-rail)"></rect>
+              <text class="white label-md vertical" x="570" y="400">Hardware</text>
+            </g>
+
+            <g class="zone" tabindex="0" role="button" aria-label="EirSpace" data-id="eirspace" data-category="hardware">
+              <rect class="shape" x="598" y="198" width="262" height="130" fill="var(--hardware)"></rect>
+              <text class="label-lg" x="729" y="264">EirSpace</text>
+            </g>
+
+            <g class="zone" tabindex="0" role="button" aria-label="RoboWars" data-id="robowars" data-category="hardware">
+              <rect class="shape" x="598" y="328" width="262" height="130" fill="var(--hardware)"></rect>
+              <text class="label-lg" x="729" y="394">RoboWars</text>
+            </g>
+
+            <g class="zone" tabindex="0" role="button" aria-label="F1 in Schools" data-id="induct" data-category="hardware">
+              <rect class="shape" x="598" y="458" width="262" height="144" fill="var(--hardware)"></rect>
+              <text class="label-lg" x="729" y="500">F1 in</text>
+              <text class="label-lg" x="729" y="564">Schools</text>
+            </g>
+
+            <g aria-label="Patch Startups section label">
+              <rect x="540" y="602" width="58" height="144" fill="var(--startup-rail)"></rect>
+              <text class="white label-sm vertical" x="570" y="674">Startups</text>
+            </g>
+
+            <g class="zone" tabindex="0" role="button" aria-label="Field of Vision" data-id="fov" data-category="startups">
+              <rect class="shape" x="598" y="602" width="262" height="144" fill="var(--startup)"></rect>
+              <text class="label-lg" x="729" y="644">Field of</text>
+              <text class="label-lg" x="729" y="704">Vision</text>
+            </g>
+          </svg>
+
+          <nav class="legend" aria-label="Filter project areas">
+            <button type="button" data-filter="programmes"><span class="dot" style="background: #a9c9ff"></span>Programmes</button>
+            <button type="button" data-filter="communities"><span class="dot" style="background: #ff6268"></span>Communities</button>
+            <button type="button" data-filter="hardware"><span class="dot" style="background: #b767ef"></span>Hardware</button>
+            <button type="button" data-filter="startups"><span class="dot" style="background: #ffe991"></span>Startups</button>
+            <button type="button" data-filter="all"><span class="dot" style="background: #fff"></span>Show all</button>
+          </nav>
+        </section>
+      </section>
+
+      <section class="mobile-showcase" aria-label="Mobile project and exhibitor cards">
+        <div class="mobile-section-head">
+          <span class="mobile-kicker">Demo Day</span>
+          <h2>Cohort Teams</h2>
+        </div>
+        <div class="mobile-card-grid" id="mobileCohortCards"></div>
+
+        <div class="mobile-section-head exhibitors">
+          <span class="mobile-kicker">Expo floor</span>
+          <h2>Exhibitors</h2>
+        </div>
+        <div class="mobile-card-grid" id="mobileExhibitorCards"></div>
+      </section>
+    </main>
+
+    <div class="popup" id="popup" aria-hidden="true">
+      <article class="popup-card" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+        <div class="popup-top">
+          <span class="tag" id="popupTag">Patch</span>
+          <button class="close" type="button" aria-label="Close popup">x</button>
+        </div>
+        <h2 id="popupTitle">Team Name</h2>
+        <p class="popup-selected" id="popupSelected" hidden>Selected person</p>
+        <div class="popup-image" id="popupImage"><img id="popupImg" alt="" /><span id="popupImageText">team photo</span></div>
+        <div class="popup-copy" id="popupCopy">6 words about project</div>
+        <div class="meta">
+          <span class="pill" id="popupZone">Zone</span>
+          <span class="pill">Demo Day</span>
+        </div>
+      </article>
+    </div>
+
+    <button class="duck-hunt-button" type="button" id="duckHuntButton" aria-controls="duckHuntPanel" aria-expanded="false">
+      Duck Hunt · <span id="duckHuntButtonCount">0/8</span>
+    </button>
+
+    <div class="duck-hunt-overlay" id="duckHuntOverlay" aria-hidden="true"></div>
+    <aside class="duck-hunt-panel" id="duckHuntPanel" aria-hidden="true" aria-labelledby="duckHuntTitle">
+      <div class="duck-hunt-handle" aria-hidden="true"></div>
+      <div class="duck-hunt-head">
+        <div>
+          <p class="duck-hunt-eyebrow">Optional expo companion</p>
+          <h2 id="duckHuntTitle">Demo Day Duck Hunt</h2>
+        </div>
+        <button class="duck-hunt-close" type="button" id="duckHuntClose" aria-label="Close Duck Hunt">x</button>
+      </div>
+
+      <p class="duck-hunt-copy">Eight ducks are hidden around the expo. Tap a physical duck's NFC tag to collect it on this phone.</p>
+
+      <div class="duck-progress-card">
+        <div class="duck-progress-row">
+          <span id="duckProgressText">0 / 8 ducks found</span>
+          <span id="duckProgressPercent">0%</span>
+        </div>
+        <div class="duck-progress-track" aria-hidden="true">
+          <div class="duck-progress-fill" id="duckProgressFill"></div>
+        </div>
+      </div>
+
+      <section class="duck-collection" aria-labelledby="duckCollectionTitle">
+        <h3 id="duckCollectionTitle">Your Ducks</h3>
+        <div class="duck-grid" id="duckGrid"></div>
+      </section>
+    </aside>
+
+    <div class="duck-toast" id="duckToast" aria-live="polite" aria-hidden="true"></div>
+
+    <script src="data/map-items.js"></script>
+    <script src="data/carousel-projects.js"></script>
+    <script src="data/ducks.js"></script>
+    <script src="sections/popup/popup.js"></script>
+    <script src="sections/project-carousel/project-carousel.js"></script>
+    <script src="sections/exhibition-map/exhibition-map.js"></script>
+    <script src="sections/mobile-showcase/mobile-showcase.js"></script>
+    <script src="sections/duck-hunt/duck-hunt.js"></script>
+    <script src="scripts/app.js"></script>
+  </body>
+</html>

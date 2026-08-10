@@ -1,0 +1,96 @@
+:root {
+  --blue: #4285f4;
+  --blue-soft: #a9c9ff;
+  --orange: #ff9900;
+  --paper: #fffef8;
+  --ink: #050505;
+  --grid-small: rgba(66, 133, 244, 0.12);
+  --grid-big: rgba(66, 133, 244, 0.2);
+  --community: #ff6268;
+  --community-rail: #ee0000;
+  --hardware: #b767ef;
+  --hardware-rail: #9100f5;
+  --startup: #ffe991;
+  --startup-rail: #e7bd00;
+  --alumni: #ee49df;
+  --font-family: Avenir, "Avenir Next", Arial, sans-serif;
+  --font-heavy: 900;
+  --font-medium: 500;
+  --font-book: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  font-family: var(--font-family);
+  font-weight: var(--font-book);
+  background:
+    linear-gradient(var(--grid-small) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-small) 1px, transparent 1px),
+    linear-gradient(var(--grid-big) 2px, transparent 2px),
+    linear-gradient(90deg, var(--grid-big) 2px, transparent 2px),
+    var(--paper);
+  background-size: 22px 22px, 22px 22px, 110px 110px, 110px 110px;
+}
+
+button {
+  font: inherit;
+}
+
+.page {
+  min-height: 100vh;
+  padding: 28px 36px 34px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(330px, 0.9fr) minmax(620px, 1.55fr);
+  gap: clamp(34px, 5vw, 70px);
+  align-items: start;
+}
+
+h1 {
+  margin: 0 0 24px;
+  color: var(--blue);
+  font-size: clamp(54px, 7vw, 82px);
+  line-height: 0.95;
+  letter-spacing: 0;
+  font-weight: var(--font-heavy);
+}
+
+svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1000px) {
+  .page {
+    padding: 20px;
+  }
+
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding: 12px 8px 104px;
+  }
+
+  .layout {
+    gap: 18px;
+  }
+
+  h1,
+  .map-title {
+    font-size: 50px;
+  }
+}
