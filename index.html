@@ -164,7 +164,14 @@
       Duck Hunt · <span id="duckHuntButtonCount">0/8</span>
     </button>
 
-    <a class="back-to-top" href="#top">Back to top</a>
+    <div class="quick-jump" aria-label="Quick page navigation">
+      <a class="back-to-top" href="#top">Back to top</a>
+      <form class="team-search" id="teamSearch" role="search">
+        <label for="teamSearchInput">Find team</label>
+        <input id="teamSearchInput" list="teamSearchOptions" autocomplete="off" placeholder="Search teams" />
+        <datalist id="teamSearchOptions"></datalist>
+      </form>
+    </div>
 
     <div class="duck-hunt-overlay" id="duckHuntOverlay" aria-hidden="true"></div>
     <aside class="duck-hunt-panel" id="duckHuntPanel" aria-hidden="true" aria-labelledby="duckHuntTitle">
