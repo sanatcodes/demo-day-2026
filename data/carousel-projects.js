@@ -8,12 +8,12 @@ window.carouselProjects = [
     details: "Arktek is building vision-integrated robotic welding for SMEs."
   },
   {
-    title: "StudyTok",
+    title: "Studytok",
     tag: "2026 Projects",
     zone: "Project 2 of 15",
     summary: "Studying that feels like scrolling TikTok.",
     image: "assets/team-photos/coroc.jpg",
-    details: "StudyTok makes studying feel like scrolling TikTok."
+    details: "Studytok makes studying feel like scrolling TikTok."
   },
   {
     title: "Heron Labs",
