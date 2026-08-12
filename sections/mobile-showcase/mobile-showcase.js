@@ -9,12 +9,12 @@ window.mobileShowcase = (() => {
     "demos",
     "eirspace",
     "robowars",
-    "ybw-1",
-    "ybw-2",
-    "ybw-3",
     "grant-1",
     "grant-2",
-    "grant-3"
+    "grant-3",
+    "ybw-1",
+    "ybw-2",
+    "ybw-3"
   ];
 
   function imageFor(item) {
