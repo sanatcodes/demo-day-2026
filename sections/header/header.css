@@ -21,7 +21,7 @@
 .day {
   margin: 0;
   font-size: clamp(28px, 4vw, 46px);
-  font-weight: var(--font-medium);
+  font-weight: var(--font-heavy);
 }
 
 @media (max-width: 1000px) {
