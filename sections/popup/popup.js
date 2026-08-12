@@ -37,7 +37,7 @@ window.popupController = (() => {
 
   function renderImage(project) {
     popupImage.innerHTML = "";
-    popupImage.classList.remove("has-image", "gallery");
+    popupImage.classList.remove("has-image", "gallery", "portrait-image");
 
     if (project.images) {
       popupImage.classList.add("has-image", "gallery");
@@ -54,6 +54,8 @@ window.popupController = (() => {
       const img = document.createElement("img");
       img.src = project.image;
       img.alt = `${project.title} project photo`;
+      if (project.imagePosition) img.style.objectPosition = project.imagePosition;
+      if (project.imageFrame === "portrait") popupImage.classList.add("portrait-image");
       popupImage.classList.add("has-image");
       popupImage.appendChild(img);
       return;

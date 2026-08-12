@@ -18,7 +18,7 @@ window.mobileShowcase = (() => {
   ];
 
   function imageFor(item) {
-    if (item.image) return { src: item.image, alt: `${item.title} photo` };
+    if (item.image) return { src: item.image, alt: `${item.title} photo`, position: item.imagePosition, frame: item.imageFrame };
     if (item.images && item.images[0]) return item.images[0];
     return null;
   }
@@ -32,6 +32,9 @@ window.mobileShowcase = (() => {
       const img = document.createElement("img");
       img.src = image.src;
       img.alt = image.alt || `${item.title} photo`;
+      if (image.frame === "square") frame.classList.add("square-image");
+      if (image.frame === "portrait") frame.classList.add("portrait-image");
+      if (image.position) img.style.objectPosition = image.position;
       frame.appendChild(img);
       return frame;
     }

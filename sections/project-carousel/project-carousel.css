@@ -93,6 +93,24 @@
   display: block;
 }
 
+.photo.square-image {
+  aspect-ratio: 1 / 1;
+  min-height: 365px;
+}
+
+.photo.square-image img {
+  min-height: 365px;
+}
+
+.photo.portrait-image {
+  aspect-ratio: 1 / 1.08;
+  min-height: 365px;
+}
+
+.photo.portrait-image img {
+  min-height: 365px;
+}
+
 .photo.has-image span {
   display: none;
 }
@@ -147,6 +165,22 @@
 
   .photo img {
     min-height: 230px;
+  }
+
+  .photo.square-image {
+    min-height: 280px;
+  }
+
+  .photo.square-image img {
+    min-height: 280px;
+  }
+
+  .photo.portrait-image {
+    min-height: 280px;
+  }
+
+  .photo.portrait-image img {
+    min-height: 280px;
   }
 
   .arrow {

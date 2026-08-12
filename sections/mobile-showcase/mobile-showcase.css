@@ -93,6 +93,16 @@
     display: block;
   }
 
+  .mobile-card-image.square-image {
+    aspect-ratio: 1 / 1;
+    height: auto;
+  }
+
+  .mobile-card-image.portrait-image {
+    aspect-ratio: 1 / 1.08;
+    height: auto;
+  }
+
   .mobile-card-kind {
     margin-bottom: 7px;
     color: var(--blue);

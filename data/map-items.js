@@ -12,6 +12,9 @@ window.mapItems = {
     tag: "Young Builder Week",
     zone: "blue zone",
     summary: "Building Dispatchr for visual AI agent orchestration.",
+    image: "assets/team-photos/adam.jpg",
+    imagePosition: "center 20%",
+    imageFrame: "portrait",
     sections: [
       {
         heading: "Bio",
@@ -135,6 +138,7 @@ window.mapItems = {
     tag: "Communities",
     zone: "red zone",
     summary: "Small groups for serious curious builders.",
+    image: "assets/team-photos/fitz-circles.jpg",
     details: "Small groups for serious curious builders."
   },
   alumni: {
@@ -158,6 +162,7 @@ window.mapItems = {
     tag: "Hardware",
     zone: "purple zone",
     summary: "Robotics battles, mechanical design and prototypes.",
+    image: "assets/team-photos/robowars.jpg",
     website: "https://www.patchrobowars.com/",
     details: "Robotics battles, mechanical design and prototypes."
   },
@@ -175,6 +180,7 @@ window.mapItems = {
     tag: "Hardware",
     zone: "purple zone",
     summary: "Bringing high-energy engineering into schools.",
+    image: "assets/team-photos/f1-in-schools.jpg",
     website: "https://www.stemracing.com/",
     details: "Bringing high-energy engineering into schools."
   }

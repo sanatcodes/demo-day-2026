@@ -16,10 +16,16 @@ window.projectCarousel = (() => {
     if (project.image) {
       featuredImage.src = project.image;
       featuredImage.alt = `${project.title} project photo`;
+      featuredImage.style.objectPosition = project.imagePosition || "";
+      featuredPhoto.classList.toggle("square-image", project.imageFrame === "square");
+      featuredPhoto.classList.toggle("portrait-image", project.imageFrame === "portrait");
       featuredPhoto.classList.add("has-image");
     } else {
       featuredImage.removeAttribute("src");
       featuredImage.alt = "";
+      featuredImage.style.objectPosition = "";
+      featuredPhoto.classList.remove("square-image");
+      featuredPhoto.classList.remove("portrait-image");
       featuredPhoto.classList.remove("has-image");
     }
   }

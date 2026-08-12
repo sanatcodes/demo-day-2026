@@ -149,6 +149,11 @@
   object-position: center top;
 }
 
+.popup-image.has-image.portrait-image img {
+  width: min(100%, 500px);
+  margin: 0 auto;
+}
+
 .popup-image.has-image span {
   display: none;
 }
