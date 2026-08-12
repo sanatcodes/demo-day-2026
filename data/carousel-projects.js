@@ -192,6 +192,13 @@ window.carouselProjects = [
     zone: "Project 13 of 15",
     summary: "An all-in-one operating system for Irish primary schools.",
     image: "assets/team-photos/ranga.jpg",
+    summaryPoints: [
+      "One place for primary school classrooms, designed to avoid adding yet another app.",
+      "Gives teachers one dashboard for classroom apps, students, schedules, class codes and daily tools.",
+      "Helps teachers manage profiles, work and portfolios together in one classroom canvas.",
+      "Includes a visual timetable so the whole class can see the shape of the day.",
+      "Provides a pupil view built differently for each child, including assignments, announcements, search, timetable and mood check-ins."
+    ],
     details: "Add Ranga's full project description here."
   },
   {
