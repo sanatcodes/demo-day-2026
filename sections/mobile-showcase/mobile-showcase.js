@@ -3,12 +3,12 @@ window.mobileShowcase = (() => {
   const exhibitorRoot = document.querySelector("#mobileExhibitorCards");
   const tilts = ["-1.2deg", "0.8deg", "1.1deg", "-0.7deg", "1.2deg", "-1deg"];
   const exhibitorIds = [
-    "demos",
+    "induct",
     "circles",
+    "fov",
+    "demos",
     "eirspace",
     "robowars",
-    "induct",
-    "fov",
     "ybw-1",
     "ybw-2",
     "ybw-3",
