@@ -194,6 +194,18 @@
   font-weight: var(--font-book);
 }
 
+.popup-summary-list {
+  margin: 12px 0 0;
+  padding-left: 24px;
+}
+
+.popup-summary-list li {
+  margin: 8px 0 0;
+  font-size: 21px;
+  line-height: 1.28;
+  font-weight: var(--font-book);
+}
+
 .popup-section {
   margin-top: 16px;
   padding-top: 14px;
@@ -265,6 +277,10 @@
   }
 
   .popup-copy p {
+    font-size: 18px;
+  }
+
+  .popup-summary-list li {
     font-size: 18px;
   }
 

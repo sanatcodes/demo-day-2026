@@ -14,6 +14,20 @@ window.popupController = (() => {
   function setPopupCopy(project) {
     popupCopy.innerHTML = "";
 
+    if (project.summaryPoints) {
+      const list = document.createElement("ul");
+      list.className = "popup-summary-list";
+
+      project.summaryPoints.forEach((point) => {
+        const item = document.createElement("li");
+        item.textContent = point;
+        list.appendChild(item);
+      });
+
+      popupCopy.appendChild(list);
+      return;
+    }
+
     if (project.sections) {
       project.sections.forEach((section) => {
         const wrapper = document.createElement("section");
