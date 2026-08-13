@@ -33,6 +33,7 @@
 }
 
 .showcase-tabs a:first-child,
+.showcase-tabs a:last-child,
 .showcase-tabs a.booklet-tab {
   background: #fff;
   color: var(--blue);
