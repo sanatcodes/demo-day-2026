@@ -20,6 +20,8 @@
 
 .showcase-tabs a {
   flex: 1;
+  display: grid;
+  place-items: center;
   border: 2px solid var(--ink);
   background: var(--blue);
   color: #fff;
@@ -30,7 +32,8 @@
   text-decoration: none;
 }
 
-.showcase-tabs a:first-child {
+.showcase-tabs a:first-child,
+.showcase-tabs a.booklet-tab {
   background: #fff;
   color: var(--blue);
 }
